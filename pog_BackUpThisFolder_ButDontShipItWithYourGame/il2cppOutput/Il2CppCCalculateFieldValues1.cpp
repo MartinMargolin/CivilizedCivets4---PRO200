@@ -13859,6 +13859,23 @@ struct EyeGazeInteraction_t4EAAB76C8910B2B25C4494294BAEDF8961147158  : public Op
 {
 };
 
+// Grab
+struct Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.InputSystem.InputActionProperty Grab::grabAction
+	InputActionProperty_tE5B1633784A72FC044A0BB5C0BE140DD7BD84FAD ___grabAction_4;
+	// UnityEngine.Transform Grab::holdTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___holdTransform_5;
+	// Grab Grab::otherHand
+	Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F* ___otherHand_6;
+	// System.Boolean Grab::grabbing
+	bool ___grabbing_7;
+	// System.Boolean Grab::stay
+	bool ___stay_8;
+	// UnityEngine.GameObject Grab::holding
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___holding_9;
+};
+
 // UnityEngine.XR.OpenXR.Features.Interactions.HTCViveControllerProfile
 struct HTCViveControllerProfile_t65F40E7ED71E6833A8252AC7F7A2CD250A5A78C4  : public OpenXRInteractionFeature_t643728BC4EB54CC2852F8D9921027BEE62E7682E
 {
@@ -18122,15 +18139,18 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4462[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4465[4] = 
 {
 	0,static_cast<int32_t>(offsetof(ConformanceAutomationFeature_t0C2E5D391DBCC81F1B86F2D7E34719B7D292BFF7_StaticFields, ___xrInstance_17)),static_cast<int32_t>(offsetof(ConformanceAutomationFeature_t0C2E5D391DBCC81F1B86F2D7E34719B7D292BFF7_StaticFields, ___xrSession_18)),0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4469[4] = 
-{
-	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4477[5] = 
-{
-	static_cast<int32_t>(offsetof(RuntimeDebuggerOpenXRFeature_t1E3C60D2636DEC25D95E63BB3300DBFC5E9057BA_StaticFields, ___kEditorToPlayerRequestDebuggerOutput_16)),static_cast<int32_t>(offsetof(RuntimeDebuggerOpenXRFeature_t1E3C60D2636DEC25D95E63BB3300DBFC5E9057BA_StaticFields, ___kPlayerToEditorSendDebuggerOutput_17)),static_cast<int32_t>(offsetof(RuntimeDebuggerOpenXRFeature_t1E3C60D2636DEC25D95E63BB3300DBFC5E9057BA, ___cacheSize_18)),static_cast<int32_t>(offsetof(RuntimeDebuggerOpenXRFeature_t1E3C60D2636DEC25D95E63BB3300DBFC5E9057BA, ___perThreadCacheSize_19)),0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4479[3] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4467[3] = 
 {
 	static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___pinchAnimationAction_4)),static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___gripAnimationAction_5)),static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___handAnimator_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4481[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4468[6] = 
+{
+	static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___grabAction_4)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___holdTransform_5)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___otherHand_6)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___grabbing_7)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___stay_8)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___holding_9)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4472[4] = 
+{
+	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4480[5] = 
+{
+	static_cast<int32_t>(offsetof(RuntimeDebuggerOpenXRFeature_t1E3C60D2636DEC25D95E63BB3300DBFC5E9057BA_StaticFields, ___kEditorToPlayerRequestDebuggerOutput_16)),static_cast<int32_t>(offsetof(RuntimeDebuggerOpenXRFeature_t1E3C60D2636DEC25D95E63BB3300DBFC5E9057BA_StaticFields, ___kPlayerToEditorSendDebuggerOutput_17)),static_cast<int32_t>(offsetof(RuntimeDebuggerOpenXRFeature_t1E3C60D2636DEC25D95E63BB3300DBFC5E9057BA, ___cacheSize_18)),static_cast<int32_t>(offsetof(RuntimeDebuggerOpenXRFeature_t1E3C60D2636DEC25D95E63BB3300DBFC5E9057BA, ___perThreadCacheSize_19)),0,};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4482[1] = 
 {
 	0,};
