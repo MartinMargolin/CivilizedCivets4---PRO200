@@ -13868,12 +13868,14 @@ struct Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F  : public MonoBehaviour_t5
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___holdTransform_5;
 	// Grab Grab::otherHand
 	Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F* ___otherHand_6;
+	// System.Boolean Grab::test
+	bool ___test_7;
 	// System.Boolean Grab::grabbing
-	bool ___grabbing_7;
+	bool ___grabbing_8;
 	// System.Boolean Grab::stay
-	bool ___stay_8;
+	bool ___stay_9;
 	// UnityEngine.GameObject Grab::holding
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___holding_9;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___holding_10;
 };
 
 // UnityEngine.XR.OpenXR.Features.Interactions.HTCViveControllerProfile
@@ -18142,9 +18144,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4465[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4467[3] = 
 {
 	static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___pinchAnimationAction_4)),static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___gripAnimationAction_5)),static_cast<int32_t>(offsetof(AnimateHandOnInput_tA9C05EB723ADD1EBE533839D67AD3A3A82F68156, ___handAnimator_6)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4468[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4468[7] = 
 {
-	static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___grabAction_4)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___holdTransform_5)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___otherHand_6)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___grabbing_7)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___stay_8)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___holding_9)),};
+	static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___grabAction_4)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___holdTransform_5)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___otherHand_6)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___test_7)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___grabbing_8)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___stay_9)),static_cast<int32_t>(offsetof(Grab_t079B57A3096D70D1FEF4D2BF08C9F426BB4F4B3F, ___holding_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4472[4] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};

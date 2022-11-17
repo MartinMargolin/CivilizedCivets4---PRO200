@@ -347,10 +347,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.1
-  m_Direction: 1
-  m_Center: {x: -0.02, y: -0.07, z: 0}
+  m_Radius: 0.038403198
+  m_Height: 0.14073804
+  m_Direction: 2
+  m_Center: {x: 0.005, y: -0.039804414, z: -0.0012220293}
 --- !u!114 &40919618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +377,8 @@ MonoBehaviour:
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   holdTransform: {fileID: 1201904063}
   otherHand: {fileID: 1114040583}
+  meshRenderer: {fileID: 0}
+  test: 0
   grabbing: 0
   stay: 0
 --- !u!1 &223974226
@@ -466,6 +468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Hand Model
       objectReference: {fileID: 0}
+    - target: {fileID: 5686134208196863108, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eda7421500c276a47862c867e79cac88, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
 --- !u!4 &239251056 stripped
@@ -884,7 +890,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1114040581}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1114040580
 GameObject:
@@ -917,8 +923,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2101799537}
   - {fileID: 1005829562}
+  - {fileID: 2101799537}
   m_Father: {fileID: 782628378}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1126,6 +1132,8 @@ MonoBehaviour:
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   holdTransform: {fileID: 1005829562}
   otherHand: {fileID: 40919618}
+  meshRenderer: {fileID: 0}
+  test: 0
   grabbing: 0
   stay: 0
 --- !u!136 &1114040584
@@ -1138,10 +1146,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.1
-  m_Direction: 1
-  m_Center: {x: 0.02, y: -0.07, z: 0}
+  m_Radius: 0.038403198
+  m_Height: 0.14073804
+  m_Direction: 2
+  m_Center: {x: -0.016089022, y: -0.039804414, z: -0.0012220293}
 --- !u!1 &1201904062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,7 +1308,7 @@ GameObject:
   - component: {fileID: 1638382525}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1378,7 +1386,7 @@ Transform:
   m_GameObject: {fileID: 1638382520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.04, y: 1.4876971, z: 0.301}
-  m_LocalScale: {x: 0.08604109, y: 0.08604109, z: 0.08604109}
+  m_LocalScale: {x: 0.17208219, y: 0.17208219, z: 0.17208219}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1407,13 +1415,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1114040581}
     m_Modifications:
+    - target: {fileID: 109434732392105323, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 109434732392105323, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 57c1105f7de439d4d89c699b61a9c99c, type: 2}
     - target: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_Name
       value: Left Hand Model
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       propertyPath: m_LocalPosition.x
