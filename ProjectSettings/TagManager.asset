@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Grabbable
   - Hand
+  - Grabbable
+  - Object
+  - Conveyor
   layers:
   - Default
   - TransparentFX

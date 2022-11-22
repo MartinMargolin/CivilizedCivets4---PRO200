@@ -15,7 +15,7 @@ public class Grab : MonoBehaviour
     [SerializeField] bool test = false;
     public bool grabbing = false;
     public bool stay = false;
-    GameObject holding;
+    public GameObject holding;
 
     Color good = new Color(134, 255, 169, 255);
     Color basic = new Color(255, 253, 134, 255);
@@ -50,7 +50,7 @@ public class Grab : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Grabbable" && grabbing && holding == null)
+        if (other.gameObject.tag == "Object" && grabbing && holding == null)
         {
 
             if (otherHand.GetComponent<Grab>().holding != null && otherHand.GetComponent<Grab>().holding.gameObject == other.gameObject) { }
@@ -73,7 +73,7 @@ public class Grab : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Grabbable" && grabbing && holding == null && !stay)
+        if (other.gameObject.tag == "Object" && grabbing && holding == null && !stay)
         {
  
                 if (otherHand.GetComponent<Grab>().holding != null && otherHand.GetComponent<Grab>().holding.gameObject == other.gameObject) { }
