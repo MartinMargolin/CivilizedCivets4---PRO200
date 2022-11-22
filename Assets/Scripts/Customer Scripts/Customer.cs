@@ -5,32 +5,28 @@ using UnityEngine;
 [RequireComponent(typeof(NavMeshMovement), typeof(PathFollower))]
 public class Customer : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] Movement movement;
     [SerializeField] PathFollower follower;
 
+    [Header("Aesthetics")]
+    [SerializeField] bool randomizeColor = false;
+    [SerializeField] List<Material> colors;
+
+    [HideInInspector] public bool pause = false;
     private GameObject dest;
-    private bool pause = false;
 
-    private void Start()
+    private void Awake()
     {
-        // get destination
-        //dest = ?;
+        if (randomizeColor) RandomizeMaterial(colors);
     }
 
-    private void Update()
+    private void RandomizeMaterial(List<Material> materials)
     {
-        if (!pause)
+        if (materials.Count > 0)
         {
-            // continue to next destination
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Register"))
-        {
-            pause = true;
-            // spawn items
+            int random = Random.Range(0, materials.Count - 1);
+            gameObject.GetComponent<MeshRenderer>().material = materials[random];
         }
     }
 }
