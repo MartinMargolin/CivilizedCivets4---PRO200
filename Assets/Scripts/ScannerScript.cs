@@ -12,4 +12,13 @@ public class ScannerScript : MonoBehaviour
             other.GetComponent<Object>().isScanned = true;
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag.Equals("Object") && other.GetComponent<Object>().isScanned == false)
+        {
+            FindObjectOfType<AudioManager>().Play("ItemScan");
+            other.GetComponent<Object>().isScanned = true;
+        }
+    }
 }

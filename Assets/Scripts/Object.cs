@@ -8,29 +8,45 @@ public class Object : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-            if (GameObject.Find("Left Hand").GetComponent<Grab>().grabbing == true && GameObject.Find("Left Hand").GetComponent<Grab>().holding == this.gameObject || GameObject.Find("Right Hand").GetComponent<Grab>().grabbing == true && GameObject.Find("Right Hand").GetComponent<Grab>().holding == this.gameObject)
+        if (GameObject.Find("Left Hand").GetComponent<Grab>().grabbing == true && GameObject.Find("Left Hand").GetComponent<Grab>().holding == this.gameObject || GameObject.Find("Right Hand").GetComponent<Grab>().grabbing == true && GameObject.Find("Right Hand").GetComponent<Grab>().holding == this.gameObject)
+        {
+            return;
+        }
+        else if (other.gameObject.tag == "Conveyor")
+        {
+            switch (other.gameObject.GetComponent<Conveyor>().direction)
             {
-                return;
+                case 1:
+                    transform.position += Vector3.forward / 70;
+                    break;
+                case 2:
+                    transform.position += Vector3.right / 70;
+                    break;
+                case 3:
+                    transform.position += Vector3.back / 70;
+                    break;
+                case 4:
+                    transform.position += Vector3.left / 70;
+                    break;
             }
-            else if (other.gameObject.tag == "Conveyor")
-            {
-                switch (other.gameObject.GetComponent<Conveyor>().direction)
-                {
-                    case 1:
-                        transform.position += Vector3.forward / 70;
-                        break;
-                    case 2:
-                        transform.position += Vector3.right / 70;
-                        break;
-                    case 3:
-                        transform.position += Vector3.back / 70;
-                        break;
-                    case 4:
-                        transform.position += Vector3.left / 70;
-                        break;
-                }
 
-            }
+        }
+       
         
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Entry"))
+        {
+            if (isScanned)
+            {
+                Physics.IgnoreCollision(this.GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
+
+            }
+        }
+    }
+
+
+
 }
