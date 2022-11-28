@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 0}
-  pathName: 
+  pathName: Path
 --- !u!114 &2181013834316767586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +167,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 7976616402844938741}
   follower: {fileID: 1126797747838468628}
+  randomizeColor: 1
+  colors:
+  - {fileID: 2100000, guid: 237439bd590d64f4d9d789ead7156909, type: 2}
+  - {fileID: 2100000, guid: 9e082e8c2769051409d85c32c49749bf, type: 2}
+  - {fileID: 2100000, guid: 414812b602ef51d438ec2c1f5ea5c3b1, type: 2}
+  - {fileID: 2100000, guid: 0d1ed093327b14f4ea6b53ec62109e3b, type: 2}
+  - {fileID: 2100000, guid: c1f2b2886000fdc4c8532470a8b00f8a, type: 2}
+  - {fileID: 2100000, guid: 584aca2d7423bd4468fcf0cbb60c2c91, type: 2}
+  - {fileID: 2100000, guid: 18133af263157054b9239a6ce529883a, type: 2}
+  pause: 0
 --- !u!1 &7410371040002364656
 GameObject:
   m_ObjectHideFlags: 0

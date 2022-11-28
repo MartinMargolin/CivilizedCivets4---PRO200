@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
+    public bool isScanned = false;
+
     private void OnTriggerStay(Collider other)
     {
             if (GameObject.Find("Left Hand").GetComponent<Grab>().grabbing == true && GameObject.Find("Left Hand").GetComponent<Grab>().holding == this.gameObject || GameObject.Find("Right Hand").GetComponent<Grab>().grabbing == true && GameObject.Find("Right Hand").GetComponent<Grab>().holding == this.gameObject)
