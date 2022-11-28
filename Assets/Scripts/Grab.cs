@@ -56,6 +56,7 @@ public class Grab : MonoBehaviour
             if (otherHand.GetComponent<Grab>().holding != null && otherHand.GetComponent<Grab>().holding.gameObject == other.gameObject) { }
             else
             {
+                other.transform.SetParent(null);
                 other.transform.SetParent(this.gameObject.transform);
                 //Debug.Log(this.gameObject.name + " | " + this.gameObject.transform);
 
@@ -79,6 +80,7 @@ public class Grab : MonoBehaviour
                 if (otherHand.GetComponent<Grab>().holding != null && otherHand.GetComponent<Grab>().holding.gameObject == other.gameObject) { }
                 else
                 {
+                    other.transform.SetParent(null);
                     other.transform.SetParent(this.gameObject.transform);
                     //Debug.Log(this.gameObject.name + " | " + this.gameObject.transform);
 
