@@ -23,6 +23,7 @@ public class PathFollower : MonoBehaviour
 		if (targetNode != null)
 		{
 			movement.MoveTowards(targetNode.transform.position);
+			Debug.Log("Walk");
 		}
 	}
 

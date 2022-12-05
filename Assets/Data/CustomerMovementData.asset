@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CustomerMovementData
   m_EditorClassIdentifier: 
   minSpeed: 6
-  maxSpeed: 12
-  maxForce: 8
+  maxSpeed: 5
+  maxForce: 10
   turnRate: 360
   orientToMovement: 1
