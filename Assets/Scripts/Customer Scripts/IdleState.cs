@@ -12,7 +12,7 @@ public class IdleState : State
     {
         owner.movement.Stop();
 
-        //owner.timer.value = 2;
+        owner.timer.value = 2;
     }
 
     public override void OnExit()

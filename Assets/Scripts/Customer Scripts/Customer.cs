@@ -18,7 +18,7 @@ public class Customer : MonoBehaviour
     public BoolRef idle;
 
     public StateMachine stateMachine = new StateMachine();
-    private GameObject dest;
+    public FloatRef timer;
 
     private void Awake()
     {
@@ -39,6 +39,7 @@ public class Customer : MonoBehaviour
     private void Update()
     {
         stateMachine.Update();
+        if (timer.value <= 0) stateMachine.SetState(stateMachine.StateFromName(typeof(PatrolState).Name));
     }
 
     private void RandomizeMaterial(List<Material> materials)
