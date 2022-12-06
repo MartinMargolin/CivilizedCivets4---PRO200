@@ -9,6 +9,8 @@ TagManager:
   - Object
   - Conveyor
   - Entry
+  - Start
+  - Quit
   layers:
   - Default
   - TransparentFX

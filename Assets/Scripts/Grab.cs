@@ -68,6 +68,15 @@ public class Grab : MonoBehaviour
             
         }
 
+        if (other.gameObject.tag == "Start")
+        {
+            // code to change game manager here
+        }
+        if (other.gameObject.tag == "Quit")
+        {
+            //quit
+        }
+
         // if (other.gameObject.tag == "Grabbable") { meshRenderer.material.SetColor("_Color", good); } else meshRenderer.material.SetColor("_Color", basic);
         // Debug.Log(holding);
     }
@@ -93,6 +102,8 @@ public class Grab : MonoBehaviour
 
             
         }
+
+     
 
         // if (other.gameObject.tag == "Grabbable") { meshRenderer.material.SetColor("_Color", good); } else meshRenderer.material.SetColor("_Color", basic);
         //Debug.Log(holding);
