@@ -10,7 +10,7 @@ public class PatrolState : State
     {
         //owner.timer.value = Random.Range(5, 10);
 
-        owner.pathFollower.targetNode = owner.pathFollower.path.GetNearestNode(owner.transform.position);
+        owner.pathFollower.targetNode = owner.pathFollower.path.GetStartNode();
         owner.movement.Resume();
     }
 

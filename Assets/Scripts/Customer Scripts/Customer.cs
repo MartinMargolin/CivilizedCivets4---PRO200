@@ -13,6 +13,7 @@ public class Customer : MonoBehaviour
     [SerializeField] bool randomizeColor = false;
     [SerializeField] List<Material> colors;
 
+    [Header("State Transitions")]
     public BoolRef walk;
     public BoolRef idle;
 
