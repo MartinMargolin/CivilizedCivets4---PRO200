@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 2449349749792742603}
   - component: {fileID: 3598430318151133644}
   - component: {fileID: 5900425489853557643}
-  - component: {fileID: -8941541490544753183}
   - component: {fileID: 1345323674990292433}
   - component: {fileID: 7976616402844938741}
   - component: {fileID: 1126797747838468628}
   - component: {fileID: 2181013834316767586}
+  - component: {fileID: 1914025844}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -104,22 +104,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-8941541490544753183
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5876714537236040489}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!195 &1345323674990292433
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -193,10 +177,29 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c1f2b2886000fdc4c8532470a8b00f8a, type: 2}
   - {fileID: 2100000, guid: 584aca2d7423bd4468fcf0cbb60c2c91, type: 2}
   - {fileID: 2100000, guid: 18133af263157054b9239a6ce529883a, type: 2}
+  - {fileID: 2100000, guid: 6324a58d39fdf864e9dcb6ecde88ba86, type: 2}
   walk:
     value: 1
   idle:
     value: 0
+  timer:
+    value: 0
+--- !u!54 &1914025844
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876714537236040489}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7410371040002364656
 GameObject:
   m_ObjectHideFlags: 0

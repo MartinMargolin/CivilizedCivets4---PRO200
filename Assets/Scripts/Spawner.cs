@@ -33,6 +33,7 @@ public class Spawner : MonoBehaviour
         {
             customerComponent.idle.value = true;
             customerComponent.walk.value = false;
+            customerComponent.spawnedItems = true;
         }
     }
 }

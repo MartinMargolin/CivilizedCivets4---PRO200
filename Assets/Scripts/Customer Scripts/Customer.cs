@@ -18,7 +18,7 @@ public class Customer : MonoBehaviour
     public BoolRef idle;
 
     public StateMachine stateMachine = new StateMachine();
-    public FloatRef timer;
+    [HideInInspector] public bool spawnedItems = false;
 
     private void Awake()
     {
@@ -39,7 +39,12 @@ public class Customer : MonoBehaviour
     private void Update()
     {
         stateMachine.Update();
-        if (timer.value <= 0) stateMachine.SetState(stateMachine.StateFromName(typeof(PatrolState).Name));
+
+        if (FindObjectsOfType<Object>().Length == 0 && spawnedItems)
+        {
+            idle.value = false;
+            walk.value = true;
+        }
     }
 
     private void RandomizeMaterial(List<Material> materials)

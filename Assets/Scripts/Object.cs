@@ -31,8 +31,6 @@ public class Object : MonoBehaviour
             }
 
         }
-       
-        
     }
 
     private void OnCollisionStay(Collision collision)
@@ -42,11 +40,9 @@ public class Object : MonoBehaviour
             if (isScanned)
             {
                 Physics.IgnoreCollision(this.GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
+                Destroy(this);
 
             }
         }
     }
-
-
-
 }

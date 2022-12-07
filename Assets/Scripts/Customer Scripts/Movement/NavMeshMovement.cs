@@ -35,9 +35,6 @@ public class NavMeshMovement : Movement
     public override void Stop()
     {
         navMeshAgent.isStopped = true;
-        navMeshAgent.speed = 0;
-        navMeshAgent.acceleration = 0;
-        navMeshAgent.angularSpeed = 0;
     }
 
 }
